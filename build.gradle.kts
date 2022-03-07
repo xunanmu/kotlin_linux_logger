@@ -15,11 +15,6 @@ repositories {
     mavenCentral()
 }
 
-("sched.klib" in mkdir("lib").list()).ifFalse {
-    URL("https://gitee.com/xunanmu/klib/raw/master/linuxX64/sched.klib").apply {
-        Files.write(readBytes(), file("lib/sched.klib"))
-    }
-}
 
 ("datetime.klib" in mkdir("lib").list()).ifFalse {
     URL("https://gitee.com/xunanmu/klib/raw/master/linuxX64/datetime.klib").apply {
